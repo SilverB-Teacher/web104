@@ -104,3 +104,24 @@ img {
     background-color: #ff4757;
     transform: scale(1.05); /* 마우스 올리면 살짝 커짐 */
 }
+
+/* 8. 편지 본문 스타일 (teacher.html 전용 느낌) */
+.letter-content {
+    background-color: #fff9e6; /* 연한 노란색 편지니 느낌 */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px dashed #d4a373; /* 편지봉투 점선 느낌 */
+    line-height: 2; /* 줄 간격을 넓게 해서 읽기 편하게 */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* 9. 돌아가기 버튼 색상 다르게 (선택사항) */
+.back-btn {
+    background-color: #95a5a6; /* 차분한 회색 */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
