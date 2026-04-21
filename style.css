@@ -125,3 +125,18 @@ img {
     border-radius: 20px;
     font-size: 0.9rem;
 }
+
+/* 10. 사진을 나란히 배치하는 핵심 코드 */
+.photo-container {
+    display: flex;             /* 가로로 나열해라! */
+    justify-content: center;   /* 가운데 정렬 */
+    gap: 20px;                 /* 사진 사이의 간격 */
+    margin: 20px 0;
+}
+
+/* 11. (선택) 사진 크기 자동 조절 */
+.photo-container img {
+    width: 45%;                /* 가로 공간의 45%씩 차지 */
+    height: auto;              /* 비율 유지 */
+    border-radius: 10px;
+}
