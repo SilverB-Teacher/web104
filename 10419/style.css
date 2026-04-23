@@ -1,0 +1,128 @@
+/* 구글 폰트에서 주아체와 나눔스퀘어라운드 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Square+Round:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nanum Square Round', sans-serif;
+    background-color: #f0f9f0; /* 아주 연한 민트빛 배경 */
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* 메인 카드 스타일 */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 40px;
+    border: 3px solid #2ecc71; /* 초록색 테두리 */
+    box-shadow: 12px 12px 0px #d5eedd; /* 입체적인 그림자 */
+    max-width: 650px;
+    width: 100%;
+    position: relative;
+}
+
+/* 메인 제목 (스티커 포인트) */
+h1 {
+    font-family: 'Jua', sans-serif;
+    color: #27ae60;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+h1::before {
+    content: '🌿'; /* 왼쪽 풀잎 스티커 */
+    margin-right: 10px;
+}
+
+h1::after {
+    content: '🍀'; /* 오른쪽 네잎클로버 스티커 */
+    margin-left: 10px;
+}
+
+/* 소제목 (초록색 알약 스티커 스타일) */
+h3 {
+    font-family: 'Jua', sans-serif;
+    background-color: #2ecc71;
+    color: white;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transform: rotate(-2deg); /* 스티커처럼 살짝 비뚤게 */
+    margin-top: 30px;
+    box-shadow: 3px 3px 0px #27ae60;
+}
+
+/* 본문 텍스트 */
+p {
+    color: #444;
+    line-height: 1.8;
+}
+
+/* 리스트 아이템 (스마일 스티커) */
+ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+ul li::before {
+    content: '?'; /* 동그란 초록색 스티커 */
+    font-size: 0.8rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* 시간표 스타일 */
+.class-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #2ecc71;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.class-table th {
+    background-color: #d5eedd;
+    color: #27ae60;
+    padding: 12px;
+}
+
+.class-table td {
+    border-bottom: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 사진 꾸미기 */
+.photo-container img {
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: rotate(2deg); /* 사진을 약간 기울여서 배치 */
+    margin: 15px 10px;
+}
+/* 선생님께 드리는 편지 버튼 */
+.btn {
+    display: block;
+    text-align: center;
+    background-color: #27ae60;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Jua', sans-serif;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    transition: 0.3s;
+    box-shadow: 0 6px 0 #1e8449;
+}
+
+.btn:hover {
+    background-color: #2ecc71;
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 #1e8449;
+}
