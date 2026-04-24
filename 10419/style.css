@@ -67,7 +67,7 @@ ul {
 }
 
 ul li::before {
-    content: '?'; /* 동그란 초록색 스티커 */
+    content: '🟢'; /* 동그란 초록색 스티커 */
     font-size: 0.8rem;
     margin-right: 10px;
     vertical-align: middle;
