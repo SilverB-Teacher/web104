@@ -50,47 +50,53 @@ body {
 
 /* [3] 편지 페이지 (아날로그 스타일) */
 .letter-page { background-color: #fdf7f2; display: flex; align-items: center; min-height: 100vh; }
+
 .letter-paper {
     background-color: #fff; width: 85%; max-width: 450px;
-    margin: 30px auto; padding: 60px 35px; position: relative;
+    margin: 30px auto; padding: 40px 30px; position: relative;
     box-shadow: 0 10px 40px rgba(0,0,0,0.06); border: 1px solid #eee;
 }
 
-.letter-stamp {
-    position: absolute; top: 35px; right: 35px;
-    width: 80px; height: 80px; object-fit: cover;
-    border: 4px solid #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transform: rotate(7deg);
-}
-
-.letter-header { margin-bottom: 30px; }
-.letter-date { font-size: 0.85em; color: #aaa; }
-.letter-header h2 { font-size: 1.4em; margin-top: 10px; color: #333; font-weight: bold; }
-
-/* 핵심: 절대 깨지지 않는 줄무늬 효과 */
+/* 본문 선 긋기 방식 변경 */
 .letter-content-final {
     margin-top: 20px;
+    border-top: 1px solid #e0e0e0; /* 제일 윗줄 */
 }
 
-.letter-content-final {
-    margin-top: 30px;
-    
-    /* 1. 줄무늬 배경 설정 (40px 간격으로 1px 선 긋기) */
-    background-image: linear-gradient(#e0e0e0 1px, transparent 1px);
-    background-size: 100% 40px; /* 줄 간격을 40px로 고정 */
-    
-    /* 2. 글자 높이를 줄 간격과 똑같이 40px로 고정 */
-    line-height: 40px; 
-    font-size: 1.1em;
+.letter-content-final .line {
+    height: 40px;        /* 한 줄의 높이 */
+    line-height: 40px;   /* 글자가 줄 가운데 오도록 함 */
+    border-bottom: 1px solid #e0e0e0; /* 글자 밑에 실제 선을 그음 */
     color: #444;
-
-    /* 3. 첫 번째 줄 위치 조정 (글자가 선 위에 사뿐히 앉게 함) */
-    /* 줄이 글자 배를 가른다면 이 숫자를 1~2px씩 키우거나 줄여보세요! */
-    padding-top: 32px; 
+    font-size: 1.05em;
+    padding-left: 5px;
 }
 
-.letter-content-final p {
-    margin: 0; /* p태그 사이의 여백을 없애야 줄이 안 깨져요! */
+/* 돌아가기 버튼 디자인 수정 */
+.letter-footer { 
+    margin-top: 30px; 
+    text-align: right; 
+    font-weight: bold; 
 }
-.letter-footer { text-align: right; margin-top: 40px; font-weight: bold; font-size: 1.1em; }
-.back-btn { display: block; margin-top: 25px; font-size: 0.75em; color: #ccc; text-decoration: none; text-align: center; }
+
+.back-link-wrapper {
+    margin-top: 40px;
+    text-align: center; /* 버튼을 가운데로 */
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #eee;
+    color: #888;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: normal;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #ff8a80;
+    color: white;
+}
