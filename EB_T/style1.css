@@ -67,9 +67,19 @@ body {
 .letter-header h2 { font-size: 1.4em; margin-top: 12px; color: #333; font-weight: bold; }
 
 .letter-content {
-    line-height: 2.3; color: #444; font-size: 1.05em; margin-top: 30px;
-    background-image: linear-gradient(transparent 95%, #f4f4f4 95%);
-    background-size: 100% 2.3em; background-attachment: local;
+    /* 1. 글자 높이를 정확히 35px로 고정 */
+    line-height: 35px; 
+    color: #444; 
+    font-size: 1.05em; 
+    margin-top: 30px;
+    
+    /* 2. 줄무늬 간격도 똑같이 35px로 설정 */
+    background-image: linear-gradient(transparent 34px, #f0f0f0 34px);
+    background-size: 100% 35px; 
+    
+    background-attachment: local;
+    /* 3. 첫 줄 시작 위치를 선 위에 딱 맞추기 위해 패딩 살짝 조절 */
+    padding-top: 2px; 
 }
 
 .letter-footer { text-align: right; margin-top: 40px; font-weight: bold; font-size: 1.1em; }
