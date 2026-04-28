@@ -1,4 +1,4 @@
-/* 기본 설정 */
+/* [1] 전체 공통 설정 */
 body {
     background-color: #f4f4f4;
     color: #333;
@@ -7,7 +7,7 @@ body {
     font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
 }
 
-/* --- 메인 페이지 (매거진 스타일) --- */
+/* [2] 메인 페이지 (매거진 스타일) */
 .magazine-container {
     background-color: white;
     width: 90%; max-width: 500px;
@@ -48,14 +48,24 @@ body {
 }
 .letter-btn:hover { background: #ff8a80; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(255, 138, 128, 0.4); }
 
-/* --- 편지 페이지 (아날로그 스타일) --- */
-.letter-page { background-color: #fdf7f2; display: flex; align-items: center; min-height: 100vh; }
-.letter-paper {
-    background-color: #fff; width: 85%; max-width: 450px;
-    margin: 30px auto; padding: 60px 35px; position: relative;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.06); border: 1px solid #eee;
+/* [3] 편지 페이지 (아날로그 스타일) */
+.letter-page { 
+    background-color: #fdf7f2; 
+    display: flex; 
+    align-items: center; 
+    min-height: 100vh; 
 }
 
+.letter-paper {
+    background-color: #fff; 
+    width: 85%; max-width: 450px;
+    margin: 30px auto; padding: 60px 35px; 
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06); 
+    border: 1px solid #eee;
+}
+
+/* 카네이션 우표 이미지 */
 .letter-stamp {
     position: absolute; top: 35px; right: 35px;
     width: 80px; height: 80px; object-fit: cover;
@@ -66,24 +76,23 @@ body {
 .letter-date { font-size: 0.85em; color: #aaa; }
 .letter-header h2 { font-size: 1.4em; margin-top: 12px; color: #333; font-weight: bold; }
 
-/* 편지 본문 박스 */
+/* 편지 본문 박스 - 줄노트 시작 */
 .letter-content-fixed {
     margin-top: 30px;
-    border-top: 1px solid #e0e0e0; /* 첫 번째 줄 시작 선 */
+    border-top: 1px solid #e0e0e0; /* 가장 윗줄 선 */
 }
 
-/* 개별 줄 디자인 */
+/* 개별 줄 설정: 글자가 줄 위에 딱 붙도록 높이를 조절했습니다 */
 .line-item {
-    height: 45px;         /* 한 줄의 높이 고정 */
-    line-height: 45px;    /* 글자를 세로 가운데 정렬 */
-    border-bottom: 1px solid #e0e0e0; /* 글자 아래에 선 긋기 */
-    padding-left: 5px;    /* 왼쪽 여백 */
+    height: 45px; 
+    line-height: 48px;    /* 45보다 살짝 크게 해서 글자를 선 위에 안착시킴 */
+    border-bottom: 1px solid #e0e0e0; /* 글자 아래 선 */
+    padding-left: 5px;
     font-size: 1.05em;
     color: #444;
-    white-space: nowrap;  /* 줄바꿈 방지 (한 줄에 쏙 들어가게) */
-    overflow: hidden;     /* 넘치는 글자는 숨김 */
-    text-overflow: ellipsis; /* 글자가 너무 길면 ... 처리 */
+    white-space: nowrap;  /* 줄바꿈 방지 */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
-.letter-footer { text-align: right; margin-top: 40px; font-weight: bold; font-size: 1.1em; }
-.back-btn { display: block; margin-top: 25px; font-size: 0.75em; color: #ccc; text-decoration: none; text-align: center; }
+.letter-
