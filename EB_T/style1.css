@@ -66,31 +66,23 @@ body {
 .letter-date { font-size: 0.85em; color: #aaa; }
 .letter-header h2 { font-size: 1.4em; margin-top: 12px; color: #333; font-weight: bold; }
 
-.letter-content {
-    /* 1. 줄 높이와 배경 사이즈를 완전히 일치시킴 */
-    line-height: 40px; 
-    background-image: linear-gradient(transparent 39px, #e0e0e0 39px);
-    background-size: 100% 40px;
-    background-attachment: local;
-
-    /* 2. 글자 서체와 크기를 고정해서 유동성을 줄임 */
-    font-size: 16px; 
-    color: #444;
+/* 편지 본문 박스 */
+.letter-content-fixed {
     margin-top: 30px;
-    
-    /* 3. 문단 정렬을 '양쪽 정렬'로 해서 줄 끝을 깔끔하게 맞춤 */
-    text-align: justify; 
-    word-break: break-all; /* 단어가 길어도 줄바꿈이 자연스럽게 */
-
-    /* 4. ★ 줄 위에 글자를 안착시키는 패딩 (이 숫자가 제일 중요해요!) ★ */
-    /* 현재 설정된 3px에서 위아래로 1px씩 조정하며 확인해보세요 */
-    padding-top: 3px; 
+    border-top: 1px solid #e0e0e0; /* 첫 번째 줄 시작 선 */
 }
 
-.letter-content p {
-    /* p 태그 자체의 여백이 줄 간격을 방해하지 않도록 설정 */
-    margin: 0;
-    padding: 0;
+/* 개별 줄 디자인 */
+.line-item {
+    height: 45px;         /* 한 줄의 높이 고정 */
+    line-height: 45px;    /* 글자를 세로 가운데 정렬 */
+    border-bottom: 1px solid #e0e0e0; /* 글자 아래에 선 긋기 */
+    padding-left: 5px;    /* 왼쪽 여백 */
+    font-size: 1.05em;
+    color: #444;
+    white-space: nowrap;  /* 줄바꿈 방지 (한 줄에 쏙 들어가게) */
+    overflow: hidden;     /* 넘치는 글자는 숨김 */
+    text-overflow: ellipsis; /* 글자가 너무 길면 ... 처리 */
 }
 
 .letter-footer { text-align: right; margin-top: 40px; font-weight: bold; font-size: 1.1em; }
