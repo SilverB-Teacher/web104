@@ -72,19 +72,25 @@ body {
     margin-top: 20px;
 }
 
-.letter-content-final p {
-    /* 글자 아래에 직접 배경 선을 긋는 방식 */
-    display: inline;
-    line-height: 2.8; /* 줄 간격 (취향껏 조절) */
+.letter-content-final {
+    margin-top: 30px;
+    
+    /* 1. 줄무늬 배경 설정 (40px 간격으로 1px 선 긋기) */
+    background-image: linear-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 100% 40px; /* 줄 간격을 40px로 고정 */
+    
+    /* 2. 글자 높이를 줄 간격과 똑같이 40px로 고정 */
+    line-height: 40px; 
     font-size: 1.1em;
     color: #444;
-    padding-bottom: 2px;
-    
-    /* 밑줄 효과: 투명하게 오다가 95% 지점에서 회색 선 출력 */
-    background-image: linear-gradient(transparent 95%, #e0e0e0 95%);
-    background-size: 100% 2.8em; /* line-height와 똑같이 맞춰야 함 */
-    background-attachment: local;
+
+    /* 3. 첫 번째 줄 위치 조정 (글자가 선 위에 사뿐히 앉게 함) */
+    /* 줄이 글자 배를 가른다면 이 숫자를 1~2px씩 키우거나 줄여보세요! */
+    padding-top: 32px; 
 }
 
+.letter-content-final p {
+    margin: 0; /* p태그 사이의 여백을 없애야 줄이 안 깨져요! */
+}
 .letter-footer { text-align: right; margin-top: 40px; font-weight: bold; font-size: 1.1em; }
 .back-btn { display: block; margin-top: 25px; font-size: 0.75em; color: #ccc; text-decoration: none; text-align: center; }
