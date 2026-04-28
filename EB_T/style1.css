@@ -67,19 +67,20 @@ body {
 .letter-header h2 { font-size: 1.4em; margin-top: 12px; color: #333; font-weight: bold; }
 
 .letter-content {
-    /* 1. 글자 높이를 정확히 35px로 고정 */
-    line-height: 35px; 
-    color: #444; 
-    font-size: 1.05em; 
+    /* 1. 줄 간격 고정 */
+    line-height: 40px; 
+    font-size: 1.1em;
+    color: #444;
     margin-top: 30px;
-    
-    /* 2. 줄무늬 간격도 똑같이 35px로 설정 */
-    background-image: linear-gradient(transparent 34px, #f0f0f0 34px);
-    background-size: 100% 35px; 
-    
+
+    /* 2. 줄무늬 설정 (투명 39px + 선 1px = 총 40px) */
+    background-image: linear-gradient(transparent 39px, #e0e0e0 39px);
+    background-size: 100% 40px;
     background-attachment: local;
-    /* 3. 첫 줄 시작 위치를 선 위에 딱 맞추기 위해 패딩 살짝 조절 */
-    padding-top: 2px; 
+
+    /* 3. ★ 핵심: 글자를 줄 위로 밀어 올리는 마법의 숫자 ★ */
+    /* 이 숫자를 1px씩 늘리거나 줄여보면서 줄 위에 글자가 딱 올라가는 지점을 찾아보세요! */
+    padding-top: 7px; 
 }
 
 .letter-footer { text-align: right; margin-top: 40px; font-weight: bold; font-size: 1.1em; }
