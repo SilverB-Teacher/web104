@@ -1,0 +1,82 @@
+/* [1] 공통 기본 설정 - 짙은 어둠 */
+body {
+    background-color: #0a0b10; /* 거의 검정에 가까운 심해색 */
+    color: #999; /* 글자색을 낮춰 눈이 편안하게 */
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* [2] 메인 페이지 디자인 - 밤공기에 스며든 잡지 */
+.magazine-container {
+    background-color: #12141d; /* 배경보다 살짝 밝은 검정 */
+    width: 90%; max-width: 500px;
+    margin: 50px auto; padding: 40px;
+    border-radius: 0; /* 완전히 각진 형태로 시크함 강조 */
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+    border: 1px solid #1e202e;
+}
+
+.header h1 { font-size: 1.3em; letter-spacing: 3px; color: #fff; font-weight: 200; }
+.line { width: 20px; height: 1px; background: #444; margin: 25px auto; }
+
+.section-title { font-size: 0.7em; color: #555; letter-spacing: 2px; text-transform: uppercase; }
+
+.tags span {
+    background: transparent; border: 1px solid #222;
+    padding: 3px 8px; font-size: 0.75em; color: #666;
+}
+
+.video-wrapper {
+    filter: grayscale(100%) contrast(1.2); /* 영상까지 흑백으로 처리해 무드 극대화 */
+    opacity: 0.6;
+}
+.video-wrapper:hover { opacity: 0.8; filter: grayscale(0%); transition: 0.5s; }
+
+.footer { border-top: 1px solid #1e202e; }
+.letter-btn {
+    background: #fff; color: #000; /* 어둠 속에서 가장 밝게 빛나는 버튼 */
+    padding: 10px 30px; border: none; font-size: 0.85em;
+}
+
+/* [3] 편지 페이지 디자인 - 어둠 속 한 줄기 빛 */
+.letter-page { background-color: #050505; }
+
+.letter-paper {
+    background-color: #1a1a1a; /* 검은 편지기 */
+    color: #bbb;
+    width: 85%; max-width: 420px;
+    padding: 60px 40px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.02); /* 은은한 잔상 */
+    border: 1px solid #252525;
+}
+
+.letter-stamp {
+    filter: invert(1) grayscale(1) opacity(0.7); /* 우표를 반전시켜 어둠에 맞춤 */
+    border: 1px solid #333;
+}
+
+.letter-date { color: #444; font-family: serif; }
+.letter-header h2 { color: #eee; font-weight: 300; }
+
+/* 공책 줄 만들기 - 어둠 속의 가느다란 선 */
+.letter-content-final {
+    margin-top: 30px;
+    border-top: 1px solid #252525;
+}
+
+.letter-content-final .line {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #222; /* 아주 희미한 줄문무늬 */
+    color: #999;
+}
+
+/* 하단 버튼 영역 */
+.letter-footer p { color: #555; font-size: 0.9em; }
+
+.back-btn {
+    background-color: transparent; color: #333;
+    border-bottom: 1px solid #222;
+}
+.back-btn:hover { color: #fff; border-color: #fff; }
