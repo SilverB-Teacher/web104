@@ -1,115 +1,87 @@
-/* [1] 공통 기본 설정 - 눈이 편안한 다크 모드 기반 */
+/* [1] 공통 기본 설정 - 편안한 딥 블루 그레이 */
 body {
-    background-color: #0a0b10;
-    color: #999;
-    margin: 0;
-    padding: 0;
-    font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
-    line-height: 1.6; /* 가독성을 위한 줄간격 */
+    background-color: #1a1c24;
+    color: #e0e0e0;
+    margin: 0; padding: 0;
+    font-family: 'Pretendard', sans-serif;
+    word-break: keep-all;
 }
 
-/* [2] 메인 페이지 디자인 - 세련된 블랙 & 골드 포인트 */
+/* [2] 메인 페이지 - 고급스러운 매거진 무드 */
 .magazine-container {
-    background-color: #12141d;
-    width: 90%; 
-    max-width: 500px;
-    margin: 50px auto; 
-    padding: 40px;
-    border-radius: 20px; /* 너무 딱딱하지 않게 라운드 추가 */
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-    border: 1px solid #1e202e;
-    box-sizing: border-box; /* 패딩이 너비를 해치지 않게 */
+    background-color: #ffffff; /* 메인은 깨끗하게 화이트로 반전 */
+    color: #333;
+    width: 90%; max-width: 480px;
+    margin: 50px auto; padding: 50px 30px;
+    border-radius: 30px; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
-.header h1 { font-size: 1.4em; letter-spacing: 1px; color: #fff; font-weight: 600; }
-.line { width: 30px; height: 2px; background: #ff8a80; margin: 20px auto; } /* 포인트 컬러 */
+.header h1 { font-size: 1.6em; font-weight: 800; color: #222; margin-bottom: 10px; }
+.line { width: 40px; height: 3px; background: #ff4d6d; margin: 20px auto; border-radius: 2px; }
 
-.section-title { font-size: 0.75em; color: #ff8a80; letter-spacing: 1px; font-weight: bold; }
+.section-title { font-size: 0.85em; color: #ff4d6d; font-weight: bold; letter-spacing: 1px; }
 
 .tags span {
-    display: inline-block;
-    background: rgba(255,138,128,0.1); 
-    border: 1px solid rgba(255,138,128,0.3);
-    padding: 4px 10px; margin: 3px;
-    font-size: 0.8em; color: #ff8a80;
-    border-radius: 4px;
+    display: inline-block; background: #fff1f2; color: #ff4d6d;
+    padding: 6px 12px; border-radius: 50px; font-size: 0.8em; margin: 4px;
+    font-weight: 500;
 }
 
 .video-wrapper {
-    position: relative; padding-bottom: 56.25%; height: 0;
-    border-radius: 12px; overflow: hidden;
-    filter: none; opacity: 1; /* 영상은 선명하게 유지 */
+    margin: 25px 0; border-radius: 20px; overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-.footer { margin-top: 30px; border-top: 1px solid #1e202e; padding-top: 20px; }
+.footer { margin-top: 40px; }
 .letter-btn {
-    display: inline-block;
-    background: #ff8a80; color: #fff; 
-    padding: 14px 40px; border-radius: 30px; 
-    text-decoration: none; font-size: 0.9em; font-weight: bold;
+    display: inline-block; background: #ff4d6d; color: white;
+    padding: 16px 45px; border-radius: 50px; text-decoration: none; 
+    font-weight: bold; box-shadow: 0 8px 20px rgba(255,77,109,0.3);
     transition: 0.3s;
 }
-.letter-btn:hover { background: #ff6a5c; transform: translateY(-2px); }
+.letter-btn:hover { transform: translateY(-3px); background: #ff758f; }
 
-/* [3] 편지 페이지 디자인 - 어버이날의 따뜻하고 밝은 톤 */
+/* [3] 편지 페이지 - 카네이션을 담은 따뜻한 편지지 */
 .letter-page { 
-    background-color: #fff9f6; /* 따뜻한 살구빛 감도는 미색 */
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%); 
     display: flex; align-items: center; justify-content: center; 
     min-height: 100vh; padding: 20px;
 }
 
 .letter-paper {
-    background-color: #ffffff;
-    color: #444;
-    width: 100%; max-width: 450px;
-    padding: 50px 30px;
-    border-radius: 2px;
-    box-shadow: 0 15px 45px rgba(220,180,160,0.2); /* 따뜻한 그림자 */
-    border: 1px solid #f2e6e0;
+    background-color: #fff;
+    width: 100%; max-width: 420px;
+    padding: 60px 35px; border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(255,182,193,0.3);
     position: relative;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* 우표 - 부모님 사진이 들어간다면 예쁘게 보임 */
+/* 상단 카네이션 포인트 장식 (선택 사항) */
+.letter-paper::before {
+    content: "♥"; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+    font-size: 40px; color: #ff4d6d; opacity: 0.2;
+}
+
 .letter-stamp {
-    position: absolute; top: 25px; right: 25px;
-    width: 65px; height: 75px; 
-    border: 4px solid #fff; outline: 1px solid #eee;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    transform: rotate(5deg);
-    z-index: 2;
+    position: absolute; top: 30px; right: 30px;
+    width: 75px; height: 75px; border-radius: 10px;
+    border: 5px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: rotate(8deg); z-index: 5;
 }
 
-.letter-date { color: #bcaaa4; font-size: 0.9em; margin-bottom: 10px; }
-.letter-header h2 { color: #5d4037; font-size: 1.4em; font-weight: bold; margin-bottom: 25px; }
+.letter-header h2 { 
+    color: #444; font-size: 1.5em; font-weight: 700; 
+    margin: 10px 0 30px 0; text-align: left;
+}
 
-/* 공책 줄 및 텍스트 정렬 수정 */
+/* 감성적인 편지 줄글 */
 .letter-content-final {
-    margin-top: 20px;
-    border-top: 1px solid #f0e0d6;
+    margin-top: 20px; border-top: 2px solid #ff4d6d; padding-top: 10px;
 }
 
 .letter-content-final .line {
-    height: 45px;
-    line-height: 45px;
-    border-bottom: 1px solid #f0e0d6;
-    color: #5d4037; 
-    font-size: 1.05em;
-    padding: 0 10px;
-    width: 100%;
-    box-sizing: border-box;
-    white-space: normal; /* 글자가 옆으로 삐져나가지 않게 */
-    word-break: keep-all; /* 단어 단위 줄바꿈으로 깔끔하게 */
-}
-
-/* 하단 버튼 영역 */
-.letter-footer { margin-top: 40px; text-align: right; }
-.letter-footer p { color: #8d6e63; font-weight: bold; font-size: 1.1em; }
-
-.back-btn {
-    display: inline-block; margin-top: 30px;
-    padding: 8px 20px; background-color: #efebe9; color: #8d6e63;
-    text-decoration: none; border-radius: 20px; font-size: 0.8em;
-}
-.back-btn:hover { background-color: #ff8a80; color: #fff; }
+    height: auto; min-height: 45px;
+    line-height
